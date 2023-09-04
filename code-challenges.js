@@ -33,6 +33,23 @@ const temperature3 = 212
 // Expected output: "212 is at boiling point"
 
 // Pseudo code:
+//Function Name: boilingPoint
+//Input: determNum
+//Output: Both number and string
+//Process: String interpolation to reference the number given to determNum.
+
+const boilingPoint = (determNum) => {
+    if(determNum < 212){
+        return `${determNum} is below boiling point`
+    }else if(determNum === 212){
+        return `${determNum} is at boiling point`
+    } else{
+        return `${determNum} is above boiling point`
+    }
+}
+    console.log(boilingPoint(42))
+    console.log(boilingPoint(350))
+    console.log(boilingPoint(212))
 
 // --------------------2) Create the code that will combine the two arrays and return the length using the test variables provided below.
 
@@ -41,6 +58,13 @@ const padres1998WorldSeriesRuns = [6, 3, 5, 3]
 // Expected output: 9
 
 // Pseudo code:
+//Input: None
+//Output: Number 
+//Process: Concat to combine both arrays and then return using .length to return how many numbers are in the array. 
+
+const combinedArray = padres1984WorldSeriesRuns.concat(padres1998WorldSeriesRuns)
+//console.log(combinedArray) - To help see array once it is combined
+console.log(combinedArray.length)
 
 // --------------------3) Create the code that will reverse the letters of a string using the test variable provided below.
 
@@ -48,6 +72,12 @@ const currentCohort = "Foxtrot 2023"
 // Expected output: "3202 tortxoF"
 
 // Pseudo code:
+//Input: None
+//Output: String
+//Process: Using split to make it an array, then using reverse to reverse the string. Don't forget the .join to combine the letters
+
+console.log(currentCohort.split("").reverse().join(""))
+
 
 // --------------------4) Create the code that will return the last index of the given value from the array using the test variables provided below.
 
@@ -60,3 +90,9 @@ const givenValue2 = 10
 // Expected output: 8
 
 // Pseudo code:
+//Input: Numbers from array
+//Output: Number
+//Process: Use .lastIndexOf to find the LAST index of the number. Since it's two of the same number we use .lastIndexOf to return the index of the last value 
+
+console.log(numberOfConnections.lastIndexOf(42))
+console.log(numberOfConnections.lastIndexOf(10))
